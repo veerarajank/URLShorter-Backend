@@ -16,6 +16,8 @@ app.use(cors({
   origin: process.env.CORS
 }))
 
+app.use('/test', (_,res) => res.send('working fine!'))
+
 // api routes
 app.use('/', require('./routes/route'))
 
